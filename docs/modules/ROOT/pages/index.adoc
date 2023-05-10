@@ -1,0 +1,5 @@
+= grafana-organizations-operator
+
+grafana-organizations-operator is a Commodore component to manage grafana-organizations-operator.
+
+See the xref:references/parameters.adoc[parameters] reference for further details.

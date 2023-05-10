@@ -1,0 +1,89 @@
+= Parameters
+
+The parent key for all of the following parameters is `grafana_organizations_operator`.
+
+== `control_api_url`
+
+[horizontal]
+type:: string
+default:: `https://api.appuio.cloud`
+
+URL of the APPUiO Cloud Control API.
+
+== `control_api_token`
+
+[horizontal]
+type:: string
+default:: `""`
+
+Service account token used to access the APPUiO Cloud Control API.
+
+== `grafana_password`
+
+[horizontal]
+type:: string
+default:: `""`
+
+Configure the password for `grafana_username`.
+
+== `grafana_secret`
+
+[horizontal]
+type:: string
+default:: `grafana-admin-password`
+
+Configure the name of the secret to fetch the Grafana admin password from. The defaults work for Grafana instances installed with the Helm chart provided by Grafana.
+
+The secret is ignored if `grafana_username` and `grafana_password` are set.
+
+== `grafana_url`
+
+[horizontal]
+type:: string
+default:: `http://vshn-appuio-grafana/`
+
+Configure the URL used to access Grafana. Do not add `/api/` at the end; this will be added by the operator.
+
+== `grafana_username`
+
+[horizontal]
+type:: string
+default:: `""`
+
+Configure the Grafana user used for managing the Grafana organizations.
+
+== `limits`
+
+[horizontal]
+type:: dict
+default::
++
+[source,yaml]
+----
+cpu: '500m'
+memory: '128Mi'
+----
+
+Configure the maximum resources.
+
+== `namespace`
+
+[horizontal]
+type:: string
+default:: `vshn-appuio-grafana`
+
+Configure the namespace used for deployment. If you want to use the `grafana_secret` then this must be the same namespace as used for the Grafana deployment.
+
+== `requests`
+
+[horizontal]
+type:: dict
+default::
++
+[source,yaml]
+----
+cpu: '50m'
+memory: '128Mi'
+----
+
+Configure the reserved resources.
