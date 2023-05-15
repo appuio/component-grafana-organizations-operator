@@ -1,0 +1,68 @@
+apiVersion: v1
+data: {}
+kind: Secret
+metadata:
+  annotations: {}
+  labels:
+    name: grafana-organizations-operator
+  name: grafana-organizations-operator
+  namespace: vshn-appuio-grafana
+stringData:
+  CONTROL_API_TOKEN: t-silent-test-1234/c-green-test-1234/grafana-organizations-operator/control_api_token
+  CONTROL_API_URL: https://api.appuio.cloud/
+  GRAFANA_PASSWORD: ''
+  GRAFANA_URL: http://vshn-appuio-grafana/
+  GRAFANA_USERNAME: ''
+type: Opaque
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations: {}
+  labels:
+    name: grafana-organizations-operator
+  name: grafana-organizations-operator
+  namespace: vshn-appuio-grafana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: grafana-organizations-operator
+  serviceName: grafana-organizations-operator
+  template:
+    metadata:
+      annotations: {}
+      labels:
+        name: grafana-organizations-operator
+    spec:
+      containers:
+        - args: []
+          env: []
+          envFrom:
+            - secretRef:
+                name: grafana-organizations-operator
+            - secretRef:
+                name: grafana-admin-password
+          image: ghcr.io/appuio/grafana-organizations-operator:v0.1.0
+          imagePullPolicy: IfNotPresent
+          name: grafana-organizations-operator
+          ports: []
+          resources:
+            limits:
+              cpu: 500m
+              memory: 128Mi
+            requests:
+              cpu: 25m
+              memory: 128Mi
+          stdin: false
+          tty: false
+          volumeMounts: []
+      imagePullSecrets: []
+      initContainers: []
+      terminationGracePeriodSeconds: 30
+      volumes: []
+  updateStrategy:
+    rollingUpdate:
+      partition: 0
+    type: RollingUpdate
+  volumeClaimTemplates: []

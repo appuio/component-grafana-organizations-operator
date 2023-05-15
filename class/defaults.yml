@@ -1,0 +1,21 @@
+parameters:
+  grafana_organizations_operator:
+    =_metadata: {}
+    namespace: vshn-appuio-grafana
+    grafana_secret: grafana-admin-password
+    grafana_username: ""
+    grafana_password: ""
+    grafana_url: http://vshn-appuio-grafana/
+    control_api_url: https://api.appuio.cloud/
+    control_api_token: ?{vaultkv:${cluster:tenant}/${cluster:name}/grafana-organizations-operator/control_api_token}
+    requests:
+      cpu: '25m'
+      memory: '128Mi'
+    limits:
+      cpu: '500m'
+      memory: '128Mi'
+    image:
+      grafana-organizations-operator:
+        registry: ghcr.io
+        repository: appuio/grafana-organizations-operator
+        tag: 'v0.1.0'
