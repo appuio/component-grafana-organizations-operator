@@ -6,8 +6,13 @@ parameters:
     grafana_username: ""
     grafana_password: ""
     grafana_url: http://vshn-appuio-grafana/
-    control_api_url: https://api.appuio.cloud/
-    control_api_token: ?{vaultkv:${cluster:tenant}/${cluster:name}/grafana-organizations-operator/control_api_token}
+    keycloak_client_id: admin-cli
+    keycloak_realm: vshn-realm
+    keycloak_url: https://id.vshn.net
+    keycloak_username: ?{vaultkv:${cluster:tenant}/${cluster:name}/grafana-organizations-operator/keycloak_username}
+    keycloak_password: ?{vaultkv:${cluster:tenant}/${cluster:name}/grafana-organizations-operator/keycloak_password}
+    keycloak_admin_group_path: "/LDAP/VSHN Ops"
+    keycloak_auto_assign_org_group_path: "/LDAP/VSHN Staff"
     requests:
       cpu: '25m'
       memory: '128Mi'

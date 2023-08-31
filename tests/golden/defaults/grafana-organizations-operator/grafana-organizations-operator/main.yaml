@@ -8,11 +8,16 @@ metadata:
   name: grafana-organizations-operator
   namespace: vshn-appuio-grafana
 stringData:
-  CONTROL_API_TOKEN: t-silent-test-1234/c-green-test-1234/grafana-organizations-operator/control_api_token
-  CONTROL_API_URL: https://api.appuio.cloud/
   GRAFANA_PASSWORD: ''
   GRAFANA_URL: http://vshn-appuio-grafana/
   GRAFANA_USERNAME: ''
+  KEYCLOAK_ADMIN_GROUP_PATH: /LDAP/VSHN Ops
+  KEYCLOAK_AUTO_ASSIGN_ORG_GROUP_PATH: /LDAP/VSHN Staff
+  KEYCLOAK_CLIENT_ID: admin-cli
+  KEYCLOAK_PASSWORD: t-silent-test-1234/c-green-test-1234/grafana-organizations-operator/keycloak_password
+  KEYCLOAK_REALM: vshn-realm
+  KEYCLOAK_URL: https://id.vshn.net
+  KEYCLOAK_USERNAME: t-silent-test-1234/c-green-test-1234/grafana-organizations-operator/keycloak_username
 type: Opaque
 ---
 apiVersion: apps/v1
