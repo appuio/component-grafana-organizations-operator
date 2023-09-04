@@ -13,11 +13,16 @@ local namespace_meta = {
 
 local secret = kube.Secret('grafana-organizations-operator') + namespace_meta {
   stringData: {
-    CONTROL_API_URL: params.control_api_url,
-    CONTROL_API_TOKEN: params.control_api_token,
     GRAFANA_URL: params.grafana_url,
     GRAFANA_USERNAME: params.grafana_username,
     GRAFANA_PASSWORD: params.grafana_password,
+    KEYCLOAK_USERNAME: params.keycloak_username,
+    KEYCLOAK_PASSWORD: params.keycloak_password,
+    KEYCLOAK_CLIENT_ID: params.keycloak_client_id,
+    KEYCLOAK_URL: params.keycloak_url,
+    KEYCLOAK_REALM: params.keycloak_realm,
+    KEYCLOAK_ADMIN_GROUP_PATH: params.keycloak_admin_group_path,
+    KEYCLOAK_AUTO_ASSIGN_ORG_GROUP_PATH: params.keycloak_auto_assign_org_group_path,
   },
 };
 
