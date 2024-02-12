@@ -8,6 +8,7 @@ metadata:
   name: grafana-organizations-operator
   namespace: vshn-appuio-grafana
 stringData:
+  GRAFANA_CLEAR_AUTO_ASSIGN_ORG: true
   GRAFANA_DATASOURCE_PASSWORD: __shared__/__shared__/metrics-receive-appuio-net-remote-write/password
   GRAFANA_DATASOURCE_URL: http://vshn-appuio-mimir-nginx.vshn-appuio-mimir.svc.cluster.local/prometheus
   GRAFANA_DATASOURCE_USERNAME: __shared__/__shared__/metrics-receive-appuio-net-remote-write/username
@@ -15,7 +16,6 @@ stringData:
   GRAFANA_URL: http://vshn-appuio-grafana/
   GRAFANA_USERNAME: ''
   KEYCLOAK_ADMIN_GROUP_PATH: /LDAP/VSHN Ops
-  KEYCLOAK_AUTO_ASSIGN_ORG_GROUP_PATH: /LDAP/VSHN Staff
   KEYCLOAK_CLIENT_ID: admin-cli
   KEYCLOAK_PASSWORD: t-silent-test-1234/c-green-test-1234/grafana-organizations-operator/keycloak_password
   KEYCLOAK_REALM: vshn-realm

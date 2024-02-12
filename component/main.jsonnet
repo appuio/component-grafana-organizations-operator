@@ -19,13 +19,13 @@ local secret = kube.Secret('grafana-organizations-operator') + namespace_meta {
     GRAFANA_DATASOURCE_URL: params.grafana_datasource_url,
     GRAFANA_DATASOURCE_USERNAME: params.grafana_datasource_username,
     GRAFANA_DATASOURCE_PASSWORD: params.grafana_datasource_password,
+    GRAFANA_CLEAR_AUTO_ASSIGN_ORG: params.grafana_clear_auto_assign_org,
     KEYCLOAK_USERNAME: params.keycloak_username,
     KEYCLOAK_PASSWORD: params.keycloak_password,
     KEYCLOAK_CLIENT_ID: params.keycloak_client_id,
     KEYCLOAK_URL: params.keycloak_url,
     KEYCLOAK_REALM: params.keycloak_realm,
     KEYCLOAK_ADMIN_GROUP_PATH: params.keycloak_admin_group_path,
-    KEYCLOAK_AUTO_ASSIGN_ORG_GROUP_PATH: params.keycloak_auto_assign_org_group_path,
   },
 };
 
