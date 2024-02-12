@@ -26,4 +26,4 @@ parameters:
       grafana-organizations-operator:
         registry: ghcr.io
         repository: appuio/grafana-organizations-operator
-        tag: 'v0.1.0'
+        tag: 'latest'
