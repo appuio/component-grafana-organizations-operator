@@ -51,8 +51,8 @@ spec:
                 name: grafana-organizations-operator
             - secretRef:
                 name: grafana-admin-password
-          image: ghcr.io/appuio/grafana-organizations-operator:v0.1.0
-          imagePullPolicy: IfNotPresent
+          image: ghcr.io/appuio/grafana-organizations-operator:latest
+          imagePullPolicy: Always
           name: grafana-organizations-operator
           ports: []
           resources:
