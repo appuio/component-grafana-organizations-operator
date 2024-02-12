@@ -9,7 +9,7 @@ parameters:
     grafana_datasource_url: "http://vshn-appuio-mimir-nginx.vshn-appuio-mimir.svc.cluster.local/prometheus"
     grafana_datasource_username: ?{vaultkv:__shared__/__shared__/metrics-receive-appuio-net-remote-write/username}
     grafana_datasource_password: ?{vaultkv:__shared__/__shared__/metrics-receive-appuio-net-remote-write/password}
-    grafana_clear_auto_assign_org: true
+    grafana_clear_auto_assign_org: "true"
     keycloak_client_id: admin-cli
     keycloak_realm: vshn-realm
     keycloak_url: https://id.vshn.net

@@ -8,7 +8,7 @@ metadata:
   name: grafana-organizations-operator
   namespace: vshn-appuio-grafana
 stringData:
-  GRAFANA_CLEAR_AUTO_ASSIGN_ORG: true
+  GRAFANA_CLEAR_AUTO_ASSIGN_ORG: 'true'
   GRAFANA_DATASOURCE_PASSWORD: __shared__/__shared__/metrics-receive-appuio-net-remote-write/password
   GRAFANA_DATASOURCE_URL: http://vshn-appuio-mimir-nginx.vshn-appuio-mimir.svc.cluster.local/prometheus
   GRAFANA_DATASOURCE_USERNAME: __shared__/__shared__/metrics-receive-appuio-net-remote-write/username
