@@ -6,7 +6,7 @@ parameters:
     grafana_username: ""
     grafana_password: ""
     grafana_url: http://vshn-appuio-grafana/
-    grafana_datasource_url: "http://vshn-appuio-mimir-nginx.vshn-appuio-mimir.svc.cluster.local/prometheus"
+    grafana_datasource_url: "http://vshn-appuio-mimir-nginx.vshn-appuio-mimir.svc.cluster.local"
     grafana_datasource_username: ?{vaultkv:__shared__/__shared__/metrics-receive-appuio-net-remote-write/username}
     grafana_datasource_password: ?{vaultkv:__shared__/__shared__/metrics-receive-appuio-net-remote-write/password}
     grafana_clear_auto_assign_org: "true"
